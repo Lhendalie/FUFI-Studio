@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Image_Loader : MonoBehaviour
 {
+    //Original photo to show
     public string url = "https://tinyjpg.com/images/social/website.jpg";
     public Renderer thisRenderer;
 
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(LoadFromLikeCorouting());

@@ -37,16 +37,15 @@ public class Player_Create : NetworkBehaviour
     private InputField caption;
     private InputField uploadedComment;
 
-    //[SyncVar]
-    //private string allComments;
-
     void Start()
     {
+        //Gets the initial data for the comment windows and fields
         GetData();
     }
 
     private void OnTriggerStay(Collider other)
     {
+        //Open/hide the Project Name window for the player
         if (other.CompareTag("ProjName"))
         {
             ShowUI();
@@ -65,6 +64,7 @@ public class Player_Create : NetworkBehaviour
             }
         }
 
+        //Open/hide the Project Task window for the player
         if (other.CompareTag("ProjTask"))
         {
             ShowUI();
@@ -83,6 +83,7 @@ public class Player_Create : NetworkBehaviour
             }
         }
 
+        //Open/hide the Project Member window for the player
         if (other.CompareTag("ProjMember"))
         {
             ShowUI();
@@ -101,6 +102,7 @@ public class Player_Create : NetworkBehaviour
             }
         }
 
+        //Open/hide the Project Game Design Document window for the player
         if (other.CompareTag("ProjGDD"))
         {
             ShowUI();
@@ -119,6 +121,7 @@ public class Player_Create : NetworkBehaviour
             }
         }
 
+        //Open/hide the Computer Code window for the player
         if (other.CompareTag("computer"))
         {
             if (Input.GetKeyDown(KeyCode.K))
@@ -149,6 +152,7 @@ public class Player_Create : NetworkBehaviour
             }
         }
 
+        //Open/hide the Gallery window for the player
         if (other.CompareTag("gallery"))
         {
             if (Input.GetKeyDown(KeyCode.U))
@@ -183,6 +187,7 @@ public class Player_Create : NetworkBehaviour
             }
         }
 
+        //Open/hide the Comment window for the player
         if (other.CompareTag("comment"))
         {            
             if (Input.GetKeyDown(KeyCode.C))

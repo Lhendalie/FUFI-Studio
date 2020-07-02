@@ -24,6 +24,5 @@ public class Player_Network : NetworkBehaviour
         myChat.SetupClient();
         myChat.SetPlayerName("PlayerNameHere", true);
     }
-
 }
 

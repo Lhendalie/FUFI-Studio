@@ -2,21 +2,16 @@
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class InteractWithComputer : NetworkBehaviour
+public class Computer_Interaction : NetworkBehaviour
 {
-    GameObject codePanel;
     public static Text userCode;
-    // Start is called before the first frame update
+
+    public GameObject codePanel;
+
     void Start()
     {
         GameObject parent = GameObject.Find("Parent");
         codePanel = parent.transform.GetChild(0).gameObject;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerStay(Collider other)
@@ -39,17 +34,5 @@ public class InteractWithComputer : NetworkBehaviour
                 codePanel.SetActive(false);
             }
         }       
-    }
-
-    [ClientRpc]
-    private void RpcGetInput()
-    {
-        
-    }
-
-    [ClientRpc]
-    void RpcShowInput()
-    {
-
     }
 }
